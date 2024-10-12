@@ -23,6 +23,7 @@
     "@payloadcms/storage-s3": "3.0.0-beta.113",
     "@supabase/supabase-js": "^2.45.4",
     "cross-env": "^7.0.3",
+    "express": "^4.21.1",
     "graphql": "^16.8.1",
     "next": "15.0.0-canary.173",
     "payload": "3.0.0-beta.113",
@@ -31,6 +32,7 @@
     "sharp": "0.32.6"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.5.4",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
