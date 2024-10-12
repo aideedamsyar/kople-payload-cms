@@ -1,0 +1,8 @@
+{
+    "builds": [
+      {
+        "src": "src/payload.config.ts",
+        "use": "@vercel/node"
+      }
+    ]
+  }
