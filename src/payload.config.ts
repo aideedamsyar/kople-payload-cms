@@ -9,7 +9,7 @@ import sharp from 'sharp';
 import { s3Storage } from '@payloadcms/storage-s3';
 
 import { Users } from './collections/Users';
-import media from './collections/Media';
+import Media from './collections/Media';
 import Bookings from './collections/Bookings';
 import TravelProducts from './collections/TravelProducts';
 import PlatformUsers from './collections/PlatformUsers';
@@ -31,7 +31,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, media, Bookings, TravelProducts, PlatformUsers],
+  collections: [Users, Media, Bookings, TravelProducts, PlatformUsers],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
