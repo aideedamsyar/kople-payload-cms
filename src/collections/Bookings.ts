@@ -10,6 +10,7 @@ const Bookings: CollectionConfig = {
   },
   fields: [
     { name: 'clerk_user_id', type: 'text', required: true },
+    { name: 'name', type: 'text', required: true }, // New 'name' field
     { name: 'product_id', type: 'text', required: true },
     { name: 'booking_date', type: 'date', required: true, defaultValue: () => new Date() },
     { name: 'status', type: 'text', required: true },

@@ -19,6 +19,11 @@ const TravelProducts: CollectionConfig = {
       required: true,
       editor: lexicalEditor(), // Use the Lexical editor with default configuration
     },
+    {
+      name: 'description_short',
+      type: 'text',
+      required: true,
+    },
     { name: 'price', type: 'number', required: true },
     { name: 'duration_days', type: 'number' },
     { name: 'available_from', type: 'date' },
@@ -32,6 +37,11 @@ const TravelProducts: CollectionConfig = {
       relationTo: 'media',
       required: true,
     },
+    {
+      name: 'payment_links',
+      type: 'text',
+      required: true,
+    }
   ],
   hooks: {
     beforeChange: [

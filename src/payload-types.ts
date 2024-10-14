@@ -92,6 +92,7 @@ export interface Media {
 export interface Booking {
   id: number;
   clerk_user_id: string;
+  name: string;
   product_id: string;
   booking_date: string;
   status: string;
@@ -121,6 +122,7 @@ export interface TravelProduct {
     };
     [k: string]: unknown;
   };
+  description_short: string;
   price: number;
   duration_days?: number | null;
   available_from?: string | null;
@@ -129,6 +131,7 @@ export interface TravelProduct {
   location?: string | null;
   max_participants?: number | null;
   featured_image: number | Media;
+  payment_links: string;
   updatedAt: string;
   createdAt: string;
 }
