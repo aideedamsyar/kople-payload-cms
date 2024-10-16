@@ -20,7 +20,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port Payload CMS will run on
-EXPOSE 8080
+EXPOSE 3000
 
 # Start the app
 CMD ["npm", "start"]
