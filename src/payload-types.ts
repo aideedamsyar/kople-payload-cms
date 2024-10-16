@@ -95,8 +95,8 @@ export interface Booking {
   name: string;
   product_id: string;
   booking_date: string;
-  status: string;
   payment_status: string;
+  payment_method: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -149,6 +149,7 @@ export interface PlatformUser {
   instagram_id?: string | null;
   first_name?: string | null;
   last_name?: string | null;
+  referral_source?: string | null;
   updatedAt: string;
   createdAt: string;
 }

@@ -20,6 +20,7 @@ const PlatformUsers: CollectionConfig = {
     { name: 'instagram_id', type: 'text' },
     { name: 'first_name', type: 'text' },
     { name: 'last_name', type: 'text' },
+    {name: 'referral_source', type: 'text'},
   ],
 };
 
