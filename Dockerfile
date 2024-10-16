@@ -1,10 +1,10 @@
 # Use a lightweight Node.js base image
-FROM node:18-alpine AS base
+FROM node:18-alpine
 
 # Set working directory
 WORKDIR /app
 
-# Install dependencies based on the package manager
+# Copy and install dependencies
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 RUN \
   if [ -f yarn.lock ]; then yarn install --frozen-lockfile; \
@@ -13,14 +13,14 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi
 
-# Copy the rest of the application code
+# Copy the rest of the application
 COPY . .
 
-# Build the Payload CMS application
+# Build the Payload CMS app
 RUN npm run build
 
-# Expose the port Payload will use
-EXPOSE 3000
+# Expose the port Payload CMS will run on
+EXPOSE 8080
 
-# Start Payload CMS in production mode
+# Start the app
 CMD ["npm", "start"]
